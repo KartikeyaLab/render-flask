@@ -65,7 +65,7 @@ def index():
             return f"Failed to enable GitHub Pages: {pages_response.text}"
 
         url = f"https://{github_username}.github.io/{repo_name}/"
-        return f"✅ Website published: <a href='{url}' target='_blank'>{url}</a>"
+        return f"✅ Website published successfully: <a href='{url}' target='_blank'>{url}</a>. Please note, it may take a few minutes for your website to go live. Thank you for your patience!"
 
     return render_template("index.html")
 
