@@ -16,7 +16,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def index():
     if request.method == 'POST':
         zip_file = request.files['zipfile']
-        github_username = request.form['username']
+        github_username = "kartfolio"
         github_token = os.getenv("GITHUB_TOKEN")
         repo_name = request.form['repo']
         branch = "gh-pages"
