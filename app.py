@@ -1,4 +1,4 @@
-give me the full app.py code which runs a api end point, "import os
+import os
 import zipfile
 import shutil
 import subprocess
@@ -71,4 +71,3 @@ def index():
 
 if __name__ == '__main__':
     app.run()
-"
