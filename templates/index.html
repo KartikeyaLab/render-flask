@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Publish to GitHub Pages</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 2em;
+        background: #f4f4f4;
+      }
+      form {
+        background: #fff;
+        padding: 2em;
+        border-radius: 10px;
+        max-width: 500px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      input,
+      button {
+        width: 100%;
+        margin: 0.5em 0;
+        padding: 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="POST" enctype="multipart/form-data">
+      <h2>Deploy to GitHub Pages</h2>
+      <input type="file" name="zipfile" required />
+      <input
+        type="text"
+        name="username"
+        placeholder="GitHub Username"
+        required
+        value="kartfolio"
+      />
+      <input type="text" name="token" placeholder="GitHub Token" required />
+      <input type="text" name="repo" placeholder="Repository Name" required />
+      <button type="submit">Upload & Publish</button>
+    </form>
+  </body>
+</html>
