@@ -3,6 +3,7 @@ import zipfile
 import shutil
 import subprocess
 import requests
+import os
 from flask import Flask, render_template, request, redirect, url_for
 from dotenv import load_dotenv
 load_dotenv()
@@ -16,10 +17,14 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def index():
     if request.method == 'POST':
         zip_file = request.files['zipfile']
-        github_username = "kartfolio"
+        github_username = request.form['username']
         github_token = os.getenv("GITHUB_TOKEN")
         repo_name = request.form['repo']
         branch = "gh-pages"
+ # Ensure upload folder exists
+
+        if not os.path.exists(UPLOAD_FOLDER):
+             os.makedirs(UPLOAD_FOLDER)
 
         # Save zip
         zip_path = os.path.join(UPLOAD_FOLDER, zip_file.filename)
