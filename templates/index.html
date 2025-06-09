@@ -32,7 +32,7 @@
             rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)
           ),
-          url("./Media/portfolio_builder.png");
+          url(https://kartikeyalab.github.io/PortfolioBuilder/Media/portfolio_builder.png);
 
         --bg-image-footer: linear-gradient(
             to top,
@@ -40,7 +40,7 @@
             rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)
           ),
-          url("./Media/portfolio_builder.png");
+          url(https://kartikeyalab.github.io/PortfolioBuilder/Media/portfolio_builder.png);
 
         --bg-overlay: linear-gradient(
           to top,
@@ -76,7 +76,7 @@
             rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)
           ),
-          url("./Media/30.png");
+          url(https://kartikeyalab.github.io/PortfolioBuilder/Media/30.png);
 
         --bg-image-footer: linear-gradient(
             to top,
@@ -84,7 +84,7 @@
             rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)
           ),
-          url("./Media/30.png");
+          url(https://kartikeyalab.github.io/PortfolioBuilder/Media/30.png);
 
         --bg-overlay: linear-gradient(
           to top,
@@ -926,8 +926,11 @@
                   id="repo"
                   name="repo"
                   required=""
-                  placeholder="e.g. my-website"
+                  placeholder="Enter the name you’d like"
                   class="w-full px-4 py-3 background_color_placeholder text-white rounded-lg placeholder_color placeholder:italic text-sm"
+                  pattern="^[a-zA-Z0-9-_]+$"
+                  title="Only letters, numbers, hyphens (-), and underscores (_) are allowed. No spaces."
+                  oninput="this.value = this.value.replace(/[^a-zA-Z0-9-_]/g, '')"
                 />
               </div>
 
@@ -951,6 +954,7 @@
                   type="submit"
                   value="Publish"
                   class="w-full button_background text-white font-semibold px-6 py-3 rounded-lg flex items-center justify-center shadow-md transition"
+                  onclick="this.disabled = true; this.form.submit();"
                 />
               </div>
             </div>
