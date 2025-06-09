@@ -17,7 +17,8 @@
 
       @font-face {
         font-family: "Bethasia";
-        src: url("Font/Bethasia.otf") format("opentype");
+        src: url("https://kartikeyalab.github.io/kartikeya/Font/Bethasia.otf")
+          format("opentype");
         font-weight: normal;
         font-style: normal;
       }
@@ -929,9 +930,12 @@
                   type="text"
                   id="repo"
                   name="repo"
-                  placeholder="Enter you website name"
+                  placeholder="Enter your website name"
                   class="w-full px-4 py-3 background_color_placeholder text-white rounded-lg placeholder_color placeholder:italic text-sm"
                   required
+                  pattern="^[a-zA-Z0-9-_]+$"
+                  title="Only letters, numbers, hyphens (-), and underscores (_) are allowed. No spaces."
+                  oninput="this.value = this.value.replace(/[^a-zA-Z0-9-_]/g, '')"
                 />
               </div>
 
@@ -1058,66 +1062,6 @@
 
       // Listen to changes
       systemPref.addEventListener("change", updateTheme);
-    </script>
-
-    <script>
-      document
-        .getElementById("upload-form")
-        .addEventListener("submit", async function (e) {
-          e.preventDefault();
-          const form = e.target;
-          const formData = new FormData(form);
-
-          try {
-            const response = await fetch("/", {
-              method: "POST",
-              body: formData,
-            });
-
-            const result = await response.json();
-            showMessage(
-              result.message,
-              result.status === "success" ? "success" : "error"
-            );
-          } catch (err) {
-            showMessage("❌ Network error. Please try again.", "error");
-          }
-        });
-    </script>
-    <script>
-      // Function to show a message in the container
-      function showMessage(message, type = "info") {
-        const container = document.getElementById("message-container");
-        const box = document.createElement("div");
-
-        let bgColor, textColor, borderColor;
-        if (type === "success") {
-          bgColor = "bg-green-100";
-          textColor = "text-green-900";
-          borderColor = "border-green-300";
-        } else if (type === "error") {
-          bgColor = "bg-red-100";
-          textColor = "text-red-900";
-          borderColor = "border-red-300";
-        } else {
-          bgColor = "bg-yellow-100";
-          textColor = "text-yellow-900";
-          borderColor = "border-yellow-300";
-        }
-
-        box.className = `relative px-6 py-4 my-2 rounded-xl border shadow ${bgColor} ${textColor} ${borderColor} transition-opacity duration-500`;
-        box.innerHTML = `
-      <button onclick="this.parentElement.remove()" class="absolute top-2 right-3 text-xl text-black/40 hover:text-black">&times;</button>
-      <div class="text-sm font-medium leading-relaxed">${message}</div>
-    `;
-
-        container.appendChild(box);
-
-        setTimeout(() => {
-          box.style.opacity = "0";
-          setTimeout(() => box.remove(), 500);
-        }, 5000);
-      }
     </script>
   </body>
 </html>
