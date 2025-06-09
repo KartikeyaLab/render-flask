@@ -4,6 +4,8 @@ import shutil
 import subprocess
 import requests
 from flask import Flask, render_template, request, redirect, url_for
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
@@ -15,7 +17,7 @@ def index():
     if request.method == 'POST':
         zip_file = request.files['zipfile']
         github_username = request.form['username']
-        github_token = request.form['token']
+        github_token = os.getenv("GITHUB_TOKEN")
         repo_name = request.form['repo']
         branch = "gh-pages"
 
