@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Builder - Developed By KartikeyaLab</title>
+    <title>Launch Site – By Kartikeya’s Lab</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link
@@ -29,7 +29,7 @@
       }
 
       :root {
-        --bg-color: #090909;
+        --bg-color: #10121b;
         --nav-border-color: #333337b8;
         --bg-image: linear-gradient(
             to top,
@@ -37,84 +37,41 @@
             rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)
           ),
-          url(https://kartikeyalab.github.io/PortfolioBuilder/Media/portfolio_builder.png);
+          url("https://kartikeyalab.github.io/PortfolioBuilder/Media/Background.webp");
 
         --bg-image-footer: linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0.5)
           ),
-          url(https://kartikeyalab.github.io/PortfolioBuilder/Media/portfolio_builder.png);
+          url("https://kartikeyalab.github.io/PortfolioBuilder/Media/Background.webp");
 
         --bg-overlay: linear-gradient(
           to top,
-          #090909 0%,
-          rgba(9, 9, 9, 0.95) 20%,
-          rgba(9, 9, 9, 0.75) 40%,
-          rgba(9, 9, 9, 0.45) 60%,
-          rgba(9, 9, 9, 0.2) 80%,
-          rgba(9, 9, 9, 0) 100%
+          #10121b 0%,
+          rgba(16, 18, 27, 0.98) 15%,
+          rgba(16, 18, 27, 0.85) 35%,
+          rgba(16, 18, 27, 0.6) 55%,
+          rgba(16, 18, 27, 0.3) 75%,
+          rgba(16, 18, 27, 0.05) 90%,
+          rgba(16, 18, 27, 0) 100%
         );
         --bg-overlay-bottom: linear-gradient(
           to bottom,
-          #090909 0%,
-          rgba(9, 9, 9, 0.95) 20%,
-          rgba(9, 9, 9, 0.75) 40%,
-          rgba(9, 9, 9, 0.45) 60%,
-          rgba(9, 9, 9, 0.2) 80%,
-          rgba(9, 9, 9, 0) 100%
+          #10121b 0%,
+          rgba(16, 18, 27, 0.98) 15%,
+          rgba(16, 18, 27, 0.85) 35%,
+          rgba(16, 18, 27, 0.6) 55%,
+          rgba(16, 18, 27, 0.3) 75%,
+          rgba(16, 18, 27, 0.05) 90%,
+          rgba(16, 18, 27, 0) 100%
         );
         --form-background: #18181b;
         --form-placeholder: #27272a;
         --form-placeholder-color: #71717a;
         --form-profession-hover: #515151;
         --check-box-color: #777777a4;
-      }
-
-      body.light {
-        --bg-color: #3a3a3a;
-        --nav-border-color: #606060bb;
-        --bg-image: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-          ),
-          url(https://kartikeyalab.github.io/PortfolioBuilder/Media/30.png);
-
-        --bg-image-footer: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-          ),
-          url(https://kartikeyalab.github.io/PortfolioBuilder/Media/30.png);
-
-        --bg-overlay: linear-gradient(
-          to top,
-          rgb(58, 58, 58) 0%,
-          rgba(58, 58, 58, 0.95) 20%,
-          rgba(58, 58, 58, 0.75) 40%,
-          rgba(58, 58, 58, 0.45) 60%,
-          rgba(58, 58, 58, 0.2) 80%,
-          rgba(58, 58, 58, 0) 100%
-        );
-
-        --bg-overlay-bottom: linear-gradient(
-          to bottom,
-          rgb(58, 58, 58) 0%,
-          rgba(58, 58, 58, 0.95) 20%,
-          rgba(58, 58, 58, 0.75) 40%,
-          rgba(58, 58, 58, 0.45) 60%,
-          rgba(58, 58, 58, 0.2) 80%,
-          rgba(58, 58, 58, 0) 100%
-        );
-        --form-background: #474747;
-        --form-placeholder: #545454;
-        --form-placeholder-color: #a1a1aa;
-        --form-profession-hover: #7a7a7a;
-        --check-box-color: #777777;
       }
 
       body {
@@ -249,8 +206,8 @@
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        background-attachment: scroll; /* more reliable on all devices */
-        background-color: #000; /* fallback */
+        background-attachment: scroll;
+        background-color: #000;
         background-blend-mode: normal;
       }
 
@@ -299,23 +256,45 @@
         margin-bottom: 20px;
       }
 
+      .god_nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
       nav {
         position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 99;
-        width: 100%;
-        background: #00000019;
-        backdrop-filter: blur(24px);
-        border-color: var(--nav-border-color);
-        border-bottom-width: 1px;
+        width: 92%;
+        max-width: 1300px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        -webkit-backdrop-filter: saturate(90%) blur(24px);
+        backdrop-filter: saturate(90%) blur(24px);
+        border-radius: 28px;
+        box-shadow: 0 1px 2px rgba(255, 255, 255, 0.08) inset,
+          0 2px 5px rgba(0, 0, 0, 0.15), 0 8px 24px rgba(0, 0, 0, 0.12),
+          0 20px 40px rgba(0, 0, 0, 0.08);
+
+        transition: all 0.4s ease-in-out;
+      }
+
+      nav:hover {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: rgba(255, 255, 255, 0.35);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25),
+          0 6px 20px rgba(0, 0, 0, 0.1) inset;
       }
 
       nav .wrapper {
         position: relative;
         max-width: 1300px;
         padding: 0px 30px;
-        height: 80px;
+        height: 70px;
         line-height: 70px;
-        margin: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -324,6 +303,7 @@
       .wrapper .nav-links {
         display: inline-flex;
       }
+
       .wrapper .logo a {
         color: #ffffff;
         text-decoration: none;
@@ -335,18 +315,21 @@
         align-items: center;
         height: 100%;
       }
-      .logo {
-        height: 100%;
+
+      .options {
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        width: 100%;
       }
+
       .nav-links li {
         list-style: none;
       }
       .nav-links li a {
         color: #ffffff;
         text-decoration: none;
-        font-size: 0.875rem;
+        font-size: 0.9rem;
         font-weight: 500;
         padding: 9px 15px;
         border-radius: 5px;
@@ -361,41 +344,78 @@
         color: #fff;
       }
 
-      .wrapper .btn {
-        color: #fff;
-        font-size: 20px;
-        cursor: pointer;
+      .mobile-menu-toggle {
         display: none;
+        cursor: pointer;
       }
-      .wrapper .btn.close-btn {
-        position: absolute;
-        right: 30px;
-        top: 10px;
+      .mobile-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100vw;
+        height: 100vh;
+        padding: 2.4rem 3.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(30px) saturate(150%);
+        -webkit-backdrop-filter: blur(30px) saturate(150%);
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+        transform: translateX(-100%) scale(0.98);
+        opacity: 0;
+        pointer-events: none;
+
+        transition: transform 0.7s cubic-bezier(0.25, 1, 0.35, 1),
+          opacity 0.5s ease-in-out;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15),
+          inset 0 0 1px rgba(255, 255, 255, 0.1);
       }
 
-      @media screen and (max-width: 970px) {
-        .search_botton {
-          display: none;
-        }
-        .wrapper .btn {
+      .mobile-nav.active {
+        transform: translateX(0%) scale(1);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .mobile-nav-header {
+        display: flex;
+      }
+
+      .mobile-nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0 2rem;
+      }
+
+      .mobile-nav-links li {
+        margin: 0 0 2.4rem 0;
+      }
+
+      .close-btn {
+        background: none;
+        border: none;
+        font-size: 1.7rem;
+        color: white;
+        cursor: pointer;
+        margin-left: auto;
+      }
+
+      @media screen and (max-width: 1160px) {
+        .mobile-menu-toggle {
           display: block;
+          z-index: 1000;
+          background: none;
+          border: none;
+          font-size: 1.5rem;
+          color: white;
         }
         .wrapper .nav-links {
-          position: fixed;
-          height: 100vh;
-          width: 100%;
-          max-width: 650px;
-          top: 0;
-          left: -100%;
-          background: #090909;
-          display: block;
-          padding: 40px 10px;
-          line-height: 50px;
-          overflow-y: auto;
-          box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
-          transition: all 0.3s ease;
+          display: none;
         }
-
         ::-webkit-scrollbar {
           width: 8px;
         }
@@ -405,32 +425,6 @@
         ::-webkit-scrollbar-thumb {
           background: #3a3b3c00;
         }
-
-        #menu-btn:checked ~ .nav-links {
-          left: 0%;
-        }
-        #menu-btn:checked ~ .btn.menu-btn {
-          display: none;
-        }
-        #close-btn:checked ~ .btn.menu-btn {
-          display: block;
-        }
-
-        .nav-links li {
-          margin: 25px 40px;
-        }
-
-        .nav-links li a {
-          padding: 0 15px;
-          display: block;
-          font-size: 1rem;
-
-          line-height: 2.75;
-        }
-      }
-
-      nav input {
-        display: none;
       }
 
       .loader {
@@ -639,7 +633,7 @@
         pointer-events: none;
         opacity: 1;
         border-radius: inherit;
-        animation: shine-flow 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        animation: shine-flow 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
       }
 
       @keyframes shine-flow {
@@ -793,66 +787,88 @@
     ></script>
   </head>
   <body class="text-white">
-    <div id="loading-circle" class="loading-circle">
-      <div class="spinner"></div>
-      <div id="loading-circle">
-        <div class="spinner"></div>
-      </div>
-    </div>
     <div class="container_universal_hidden">
-      <nav>
-        <div class="wrapper">
-          <div class="logo">
-            <a href="https://kartikeyalab.github.io/kartikeya/">Kartikeya</a>
+      <div class="god_nav">
+        <nav>
+          <div class="wrapper">
+            <div class="options">
+              <div class="logo">
+                <a href="#">Kartikeya</a>
+              </div>
+              <div id="openMobileMenu" class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+              </div>
+            </div>
+
+            <ul class="nav-links">
+              <li><a href="#">Home</a></li>
+
+              <li>
+                <a href="https://github.com/KartikeyaLab" target="_blank"
+                  >Github</a
+                >
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@clever-ways" target="_blank"
+                  >Youtube</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://monkeytype.com/profile/Karitkeya"
+                  target="_blank"
+                  >Monkeytype</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="https://kartikeyalab.github.io/PortfolioBuilder/"
+                  target="_blank"
+                  >Build</a
+                >
+              </li>
+            </ul>
           </div>
+        </nav>
+      </div>
 
-          <input type="radio" name="slider" id="menu-btn" />
-          <input type="radio" name="slider" id="close-btn" />
-          <ul class="nav-links">
-            <label for="close-btn" class="btn close-btn">
-              <i class="fas fa-times"></i>
-            </label>
-            <li><a href="#" class="nav-link">Home</a></li>
-            <li>
-              <a href="https://github.com/KartikeyaLab" target="_blank"
-                >Github</a
-              >
-            </li>
-            <li>
-              <a href="https://www.youtube.com/@clever-ways" target="_blank"
-                >Youtube</a
-              >
-            </li>
-            <li>
-              <a href="https://monkeytype.com/profile/Karitkeya" target="_blank"
-                >Monkeytype</a
-              >
-            </li>
-
-            <li class="search_botton">
-              <a href="#message_for_you">
-                <i class="fa-solid fa-heart"></i>
-              </a>
-            </li>
-          </ul>
-
-          <label for="menu-btn" class="btn menu-btn">
-            <i class="fas fa-bars"></i>
-          </label>
+      <div id="mobileMenu" class="mobile-nav">
+        <div class="mobile-nav-header">
+          <button id="closeMobileMenu" class="close-btn">
+            <i class="fas fa-times"></i>
+          </button>
         </div>
-      </nav>
+        <ul class="mobile-nav-links">
+          <li><a href="#">Home</a></li>
+
+          <li>
+            <a href="https://github.com/KartikeyaLab" target="_blank">Github</a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@clever-ways" target="_blank"
+              >Youtube</a
+            >
+          </li>
+          <li>
+            <a href="https://monkeytype.com/profile/Karitkeya" target="_blank"
+              >Monkeytype</a
+            >
+          </li>
+        </ul>
+      </div>
 
       <section
         class="flex-grow flex flex-col justify-center items-center text-center px-6 header"
       >
         <h2 class="text-6xl md:text-8xl font-bold mb-2 leading-none">
-          Publish Now!
+          Launch Site
         </h2>
         <p class="text-zinc-400 text-base md:text-lg">
-          Create · Showcase · Inspire
+          Publish · Present · Impact
         </p>
-        <p class="text-zinc-400 text-base md:text-lg mb-5">
-          Publish your portfolio in moments, masterfully.
+        <p class="text-zinc-400 text-base md:text-lg">
+          Effortless. Beautiful. Yours forever — 100% free.
         </p>
 
         <div
@@ -861,7 +877,7 @@
           <a
             href="#getstarted"
             title="Build Your Portfolio"
-            class="glimmer-button group relative inline-flex items-center justify-center px-8 py-3 rounded-xl bg-white/10 border border-white/30 backdrop-blur-lg shadow-lg transition-all duration-300 hover:scale-105 hover:border-white/40 hover:shadow-2xl"
+            class="glimmer-button group relative inline-flex items-center justify-center px-10 py-5 rounded-[2rem] bg-white/10 border border-white/30 backdrop-blur-lg shadow-lg transition-all duration-300 hover:scale-105 hover:border-white/40 hover:shadow-2xl"
           >
             <span
               class="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent to-white/20 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
@@ -869,7 +885,7 @@
             <span
               class="relative z-10 text-base font-medium text-white group-hover:text-white/90 transition-colors duration-300"
             >
-              Publish Your Website!
+              Launch Your Website!
             </span>
           </a>
         </div>
@@ -879,7 +895,7 @@
 
       <section id="getstarted" class="px-6 py-24 max-w-6xl mx-auto">
         <h3
-          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-2 sm:mb-4"
+          class="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold mb-2 sm:mb-4 text-center"
         >
           Go Live, Totally Free!
         </h3>
@@ -888,24 +904,16 @@
         </p>
 
         <form method="POST" enctype="multipart/form-data">
-          <div class="max-w-6xl mx-auto mt-10">
+          <div class="max-w-[60rem] mx-auto px-1">
             <div
-              class="dark_background_color rounded-2xl shadow-2xl border border-zinc-700 p-6 md:p-8"
+              class="rounded-[2rem] bg-white/5 backdrop-blur-2xl border border-white/10 p-6 sm:p-8 transition-all duration-500"
             >
               <!-- Header -->
-              <h2
-                class="text-2xl font-semibold text-white mb-2 text-center md:text-left"
-              >
-                Website Information
-              </h2>
-              <p class="text-sm text-zinc-400 mb-6 text-center md:text-left">
-                Please fill in your details below. All fields marked with
-                <span class="text-red-500">*</span> are required.
-              </p>
-              <div class="mb-6">
+
+              <div class="mb-6 hidden">
                 <label
                   for="username"
-                  class="block text-sm font-medium text-zinc-300 mb-1"
+                  class="block text-sm mb-2 ml-1 text-zinc-400"
                   >GitHub Username (No Need)
                 </label>
                 <input
@@ -921,18 +929,16 @@
               </div>
 
               <div class="mb-6">
-                <label
-                  for="repo"
-                  class="block text-sm font-medium text-zinc-300 mb-1"
-                  >Website Name <span class="text-red-500">*</span></label
-                >
+                <label for="repo" class="block text-sm mb-2 ml-1 text-zinc-400"
+                  >Website Name
+                </label>
                 <input
                   type="text"
                   id="repo"
                   name="repo"
                   required
                   placeholder="Enter the name you’d like"
-                  class="w-full px-4 py-3 background_color_placeholder text-white rounded-lg placeholder_color placeholder:italic text-sm"
+                  class="peer w-full pt-4 pb-4 pr-6 pl-6 text-white bg-transparent border border-white/10 rounded-[1.4rem] focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/20 transition duration-300 placeholder:italic"
                   pattern="^[a-zA-Z0-9-_]+$"
                   title="Only letters, numbers, hyphens (-), and underscores (_) are allowed. No spaces."
                   oninput="this.value = this.value.replace(/[^a-zA-Z0-9-_]/g, '')"
@@ -942,8 +948,8 @@
               <div class="mb-6">
                 <label
                   for="zipfile"
-                  class="block text-sm font-medium text-zinc-300 mb-1"
-                  >Upload .zip File <span class="text-red-500">*</span></label
+                  class="block text-sm mb-2 ml-1 text-zinc-400"
+                  >Upload .zip File</label
                 >
                 <input
                   type="file"
@@ -951,14 +957,12 @@
                   name="zipfile"
                   accept=".zip"
                   required
-                  class="w-full px-4 py-3 background_color_placeholder text-white rounded-lg placeholder_color placeholder:italic text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-[#7a7a7a] file:text-white hover:file:bg-[#909090]"
+                  class="peer w-full pt-4 pb-4 pr-6 pl-6 text-white bg-transparent border border-white/10 rounded-[1.4rem] focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/20 transition duration-300 placeholder:italic file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-[#7a7a7a] file:text-white hover:file:bg-[#909090]"
                 />
               </div>
 
               <div class="mb-6">
-                <label
-                  for="link"
-                  class="block text-sm font-medium text-zinc-300 mb-1"
+                <label for="link" class="block text-sm mb-2 ml-1 text-zinc-400"
                   >Website Link
                 </label>
                 <input
@@ -968,32 +972,30 @@
                   required
                   placeholder="Website link will appear here"
                   readonly=""
-                  class="w-full px-4 py-3 background_color_placeholder text-white rounded-lg placeholder_color placeholder:italic text-sm"
-                />
-              </div>
-              <div class="flex justify-center mt-4">
-                <button
-                  type="button"
-                  onclick="copyLink()"
-                  class="w-full button_background text-white font-semibold px-6 py-3 rounded-lg flex items-center justify-center shadow-md transition"
-                >
-                  Copy Link
-                </button>
-              </div>
-              <div class="flex justify-center mt-6">
-                <input
-                  type="submit"
-                  value="Publish"
-                  class="w-full button_background text-white font-semibold px-6 py-3 rounded-lg flex items-center justify-center shadow-md transition"
-                  onclick="this.disabled = true; this.form.submit();"
+                  class="peer w-full pt-4 pb-4 pr-6 pl-6 text-white bg-transparent border border-white/10 rounded-[1.4rem] focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/20 transition duration-300 placeholder:italic"
                 />
               </div>
 
-              <div class="block text-sm font-medium text-zinc-300 mb-1 mt-5">
-                ⚠️ Note: After clicking the "Publish" button, it may take a few
-                minutes for your site to be live on GitHub. If you see a 404
-                error initially, don't worry, your site will be available
-                shortly.
+              <div class="flex flex-col lg:flex-row justify-center gap-4 mt-6">
+                <button
+                  type="button"
+                  onclick="copyLink()"
+                  class="flex-1 px-6 py-4 text-white text-[1rem] font-semibold rounded-[1.4rem] transition button_background"
+                >
+                  Copy Link
+                </button>
+
+                <input
+                  type="submit"
+                  value="Publish"
+                  onclick="this.disabled = true; this.form.submit();"
+                  class="flex-1 px-6 py-4 text-white text-[1rem] font-semibold rounded-[1.4rem] transition button_background cursor-pointer"
+                />
+              </div>
+
+              <div class="text-center text-sm text-zinc-400 mt-6 mb-2">
+                *It may take a few minutes for your site to go live. If you see
+                a 404 at first, don't worry — it’s updating.
               </div>
             </div>
           </div>
@@ -1084,11 +1086,9 @@
         }
       };
 
-      // Initial check
       const systemPref = window.matchMedia("(prefers-color-scheme: light)");
       updateTheme(systemPref);
 
-      // Listen to changes
       systemPref.addEventListener("change", updateTheme);
 
       function updateLink() {
@@ -1104,7 +1104,6 @@
       function copyLink() {
         const linkInput = document.getElementById("link");
 
-        // Create a temporary textarea
         const temp = document.createElement("textarea");
         temp.value = linkInput.value;
         document.body.appendChild(temp);
@@ -1117,6 +1116,25 @@
         }
         document.body.removeChild(temp);
       }
+
+      const openBtn = document.getElementById("openMobileMenu");
+      const closeBtn = document.getElementById("closeMobileMenu");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const navLinks = mobileMenu.querySelectorAll("a");
+
+      openBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+        });
+      });
     </script>
   </body>
 </html>
