@@ -672,6 +672,63 @@
           transform: rotate(360deg);
         }
       }
+
+      .elegant-spinner {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+        border-top: 4px solid #f8f3d9;
+        animation: Spin_z_nnnn 1s cubic-bezier(0.4, 0, 0.2, 1) infinite,
+          fadeIn 0.3s ease-in-out;
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+      }
+
+      @keyframes Spin_z_nnnn {
+        0% {
+          transform: rotate(0deg);
+          animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+        }
+        50% {
+          transform: rotate(180deg);
+          animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      #loading-circle {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s ease, visibility 0s 0.5s;
+      }
+
+      #loading-circle.hidden {
+        opacity: 0;
+        visibility: hidden;
+        z-index: -99999;
+      }
     </style>
 
     <script
@@ -680,6 +737,10 @@
     ></script>
   </head>
   <body class="text-white">
+    <div id="loading-circle" class="loading-circle">
+      <div class="elegant-spinner"></div>
+    </div>
+
     <div class="container_universal_hidden">
       <div class="god_nav">
         <nav>
@@ -695,6 +756,9 @@
 
             <ul class="nav-links">
               <li><a href="#">Home</a></li>
+              <li>
+                <a href="#versiondetails">Version</a>
+              </li>
 
               <li>
                 <a href="https://github.com/KartikeyaLab" target="_blank"
@@ -718,7 +782,7 @@
                 <a
                   href="https://kartikeyalab.github.io/PortfolioBuilder/"
                   target="_blank"
-                  >Build</a
+                  >Create</a
                 >
               </li>
             </ul>
@@ -734,6 +798,9 @@
         </div>
         <ul class="mobile-nav-links">
           <li><a href="#">Home</a></li>
+          <li>
+            <a href="#versiondetails">Version</a>
+          </li>
 
           <li>
             <a href="https://github.com/KartikeyaLab" target="_blank">Github</a>
@@ -746,6 +813,14 @@
           <li>
             <a href="https://monkeytype.com/profile/Karitkeya" target="_blank"
               >Monkeytype</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://kartikeyalab.github.io/PortfolioBuilder/"
+              target="_blank"
+              >Create</a
             >
           </li>
         </ul>
@@ -790,10 +865,10 @@
         <h3
           class="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold mb-2 sm:mb-4 text-center"
         >
-          Go Live, Totally Free!
+          Publish for Free!
         </h3>
         <p class="dim_text text-center mb-10 text-sm sm:text-base">
-          Transform your ideas into reality, instantly.
+          Ideas Become Reality. Just Like That.
         </p>
 
         <form method="POST" enctype="multipart/form-data">
@@ -905,49 +980,146 @@
         ></div>
       </section>
 
+      <section
+        id="versiondetails"
+        class="px-6 py-24 max-w-6xl mx-auto text-center"
+      >
+        <h3
+          class="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold mb-2 sm:mb-4 text-center"
+        >
+          Version Spotlight
+        </h3>
+        <p class="dim_text text-center mb-10 text-sm sm:text-base">
+          The biggest update yet. Here's what makes this version truly next-gen.
+        </p>
+
+        <div
+          class="glow-card w-full max-w-4xl mx-auto text-left bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-10 backdrop-blur-lg shadow-lg"
+        >
+          <div class="mb-8">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="text-xl sm:text-2xl font-semibold text-white">
+                Release <span class="text-blue-400">v2.0</span>
+                <span class="text-zinc-400">Frosted Edge </span>
+              </span>
+              <span
+                class="text-xs bg-white/10 text-white px-2.5 py-0.5 rounded-full font-medium border border-white/20"
+              >
+                Latest
+              </span>
+            </div>
+            <p class="text-sm text-zinc-400 mt-1">Published on June 17, 2025</p>
+          </div>
+
+          <div
+            class="space-y-10 text-sm sm:text-[15px] leading-relaxed text-zinc-300"
+          >
+            <section>
+              <h5 class="text-white font-medium mb-3 text-base sm:text-lg">
+                New
+              </h5>
+              <ul class="space-y-2 pl-2">
+                <li>– Fully revamped website publishing flow</li>
+                <li>– Elegant launch animation and intro spinner</li>
+                <li>– Mobile-responsive glassmorphic navigation bar</li>
+                <li>
+                  – Automatic deployment from zip upload - without waiting
+                </li>
+              </ul>
+            </section>
+
+            <!-- Improvements -->
+            <section>
+              <h5 class="text-white font-medium mb-3 text-base sm:text-lg">
+                Improvements
+              </h5>
+              <ul class="space-y-2 pl-2">
+                <li>– Optimized UI for faster load and smoother interaction</li>
+                <li>– Cleaner form inputs with intelligent link generation</li>
+                <li>– Typography tuned for visual balance</li>
+              </ul>
+            </section>
+
+            <!-- Mobile & Accessibility -->
+            <section>
+              <h5 class="text-white font-medium mb-3 text-base sm:text-lg">
+                Mobile & Accessibility
+              </h5>
+              <ul class="space-y-2 pl-2">
+                <li>
+                  – Refined layout for small screens and touch interactions
+                </li>
+                <li>– Responsive mobile menu with smooth toggling</li>
+              </ul>
+            </section>
+
+            <!-- Optimization -->
+            <section>
+              <h5 class="text-white font-medium mb-3 text-base sm:text-lg">
+                Optimization
+              </h5>
+              <ul class="space-y-2 pl-2">
+                <li>
+                  – Lazy content reveal after loader for performance boost
+                </li>
+                <li>– Improved JavaScript logic for better user feedback</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+
       <footer
         id="footer"
         class="relative w-full bg-black bg-opacity-90 text-white footer-section"
       >
         <div class="space_height_bottom"></div>
         <div class="transparent_overlay_bottom"></div>
+        <div class="w-full border-b border-zinc-700"></div>
 
         <div
           class="flex flex-col md:flex-row justify-between gap-12 px-6 md:px-16 py-12"
         >
           <div class="w-full md:w-1/2">
             <h2
-              class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-normal"
+              class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-normal"
             >
               About Me
             </h2>
-            <p class="text-zinc-400 text-base md:text-lg leading-snug mt-4">
-              I’m Kartikeya, a programmer and typist, skilled in front-end
-              development (HTML, CSS, JavaScript, React) and Python. I also have
-              experience in C and video editing
+            <p class="text-zinc-400 text-base md:text-lg mt-4">
+              I build websites, type fast, code in HTML/CSS/JS, dabble in
+              Python, touch C when I’m brave, and edit videos for fun.
             </p>
           </div>
 
           <div class="w-full md:w-1/2">
             <h2
-              class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-normal"
+              class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-normal"
             >
               Wanna talk?
             </h2>
-            <p class="text-zinc-400 text-base md:text-lg leading-snug mt-4">
-              Let’s connect and create something amazing together. Feel free to
-              reach out to me here
+            <p class="text-zinc-400 text-base md:text-lg mt-4">
+              Got an idea or just wanna chat? I’m in—let’s make something
+              awesome!
               <a
                 href="https://kartikeyalab.github.io/kartikeya/#contact"
                 class="underline"
-                >contact</a
-              >. I’m open to new ideas and collaborations. Let’s create!
+                >Contact</a
+              >.
             </p>
           </div>
         </div>
 
-        <div class="text-center py-6 text-zinc-400 text-sm border_div">
+        <div
+          class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-zinc-400"
+        >
           © <span id="year"></span> Kartikeya. All rights reserved.
+          <span class="inline-block mx-2 text-zinc-500">|</span>
+          <a class="text-zinc-400" href="#versiondetails"
+            >Version
+
+            <span class="font-medium text-zinc-400 tracking-widest">v2.0</span>
+          </a>
         </div>
       </footer>
     </div>
@@ -1044,6 +1216,35 @@
         loader.style.display = "Block";
         publishing.innerHTML = "Publishing";
       }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const glowCards = document.querySelectorAll(".glow-card");
+
+        glowCards.forEach((card) => {
+          let mouseX = 0,
+            mouseY = 0;
+          let currentX = 0,
+            currentY = 0;
+
+          card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            mouseX = e.clientX - rect.left;
+            mouseY = e.clientY - rect.top;
+          });
+
+          function animateGlow() {
+            currentX += (mouseX - currentX) * 0.1;
+            currentY += (mouseY - currentY) * 0.1;
+
+            card.style.setProperty("--x", `${currentX}px`);
+            card.style.setProperty("--y", `${currentY}px`);
+
+            requestAnimationFrame(animateGlow);
+          }
+
+          animateGlow();
+        });
+      });
     </script>
   </body>
 </html>
